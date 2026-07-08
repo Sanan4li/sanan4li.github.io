@@ -1,9 +1,9 @@
 export const profile = {
-  name: "Abdul Qadir Sanan",
+  name: "Sanan Ali",
   shortName: "SANAN",
-  title: "Senior Software Engineer",
+  title: "AI Software Engineer",
   roles: [
-    "Senior Software Engineer",
+    "AI Software Engineer",
     "Full Stack JavaScript Developer",
     "React & React Native Expert",
     "AI / LLM Integration Engineer",
@@ -13,7 +13,7 @@ export const profile = {
   email: "alisanan620@gmail.com",
   phone: "+92 346 4674965",
   summary:
-    "Highly motivated Senior Software Engineer with 6+ years of industry experience building and maintaining Web, Desktop and Mobile applications. Skilled in JavaScript, TypeScript, React, Electron, and AI/LLM integration. Effective team player with strong analytical skills and a proven ability to deliver complex, production-grade solutions.",
+    "Highly motivated AI Software Engineer with 6+ years of industry experience building and maintaining Web, Desktop and Mobile applications. Skilled in JavaScript, TypeScript, React, Electron, and AI/LLM integration. Effective team player with strong analytical skills and a proven ability to deliver complex, production-grade solutions.",
   social: {
     github: "https://github.com/Sanan4li",
     linkedin: "https://www.linkedin.com/in/Sanan4li",

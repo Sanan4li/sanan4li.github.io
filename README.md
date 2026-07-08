@@ -1,6 +1,6 @@
 # sanan4li.github.io
 
-Personal portfolio of **Abdul Qadir Sanan (Sanan Ali)** — Senior Software Engineer.
+Personal portfolio of **Sanan Ali** — AI Software Engineer.
 
 Built with Next.js 15, TypeScript, Tailwind CSS 4 and Framer Motion, exported as a static site and deployed to GitHub Pages via GitHub Actions.
 

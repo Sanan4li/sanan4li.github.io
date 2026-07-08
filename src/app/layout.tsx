@@ -14,22 +14,21 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sanan4li.github.io"),
-  title: "Sanan Ali — Senior Software Engineer",
+  title: "Sanan Ali — AI Software Engineer",
   description:
-    "Abdul Qadir Sanan (Sanan Ali) is a Senior Software Engineer with 6+ years of experience building Web, Desktop and Mobile applications with JavaScript, TypeScript, React, Electron, and AI/LLM integration.",
+    "Sanan Ali is an AI Software Engineer with 6+ years of experience building Web, Desktop and Mobile applications with JavaScript, TypeScript, React, Electron, and AI/LLM integration.",
   keywords: [
     "Sanan4li",
     "Sanan Ali Portfolio",
-    "Abdul Qadir Sanan",
     "Sanan Ali Developer",
     "Sanan Ali Github",
     "Sanan Ali Software Engineer",
     "React Developer Lahore",
   ],
   openGraph: {
-    title: "Sanan Ali — Senior Software Engineer",
+    title: "Sanan Ali — AI Software Engineer",
     description:
-      "Senior Software Engineer — Web, Desktop & Mobile apps. React, TypeScript, Electron, AI/LLM.",
+      "AI Software Engineer — Web, Desktop & Mobile apps. React, TypeScript, Electron, AI/LLM.",
     url: "https://sanan4li.github.io",
     type: "website",
     images: ["/images/sanan.png"],

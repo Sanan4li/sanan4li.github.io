@@ -118,7 +118,7 @@ export default function Hero() {
             <div className="overflow-hidden rounded-full bg-void-900">
               <Image
                 src="/images/sanan.png"
-                alt="Sanan Ali — Senior Software Engineer"
+                alt="Sanan Ali — AI Software Engineer"
                 width={280}
                 height={280}
                 priority
