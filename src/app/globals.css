@@ -1,0 +1,215 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-matrix-50: #e8ffef;
+  --color-matrix-100: #c6ffd9;
+  --color-matrix-200: #8fffb5;
+  --color-matrix-300: #4dff8a;
+  --color-matrix-400: #00ff41;
+  --color-matrix-500: #00e63a;
+  --color-matrix-600: #00c235;
+  --color-matrix-700: #009929;
+  --color-matrix-800: #007a21;
+  --color-matrix-900: #005c19;
+
+  --color-void-950: #050a07;
+  --color-void-900: #0a120d;
+  --color-void-800: #0e1a12;
+  --color-void-700: #14241a;
+  --color-void-600: #1c3324;
+
+  --font-mono-hack: var(--font-jetbrains), ui-monospace, monospace;
+  --font-sans-hack: var(--font-space-grotesk), ui-sans-serif, system-ui;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-void-950);
+  color: #d1e8d8;
+  font-family: var(--font-sans-hack);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(0, 255, 65, 0.3);
+  color: #fff;
+}
+
+/* green scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #050a07;
+}
+::-webkit-scrollbar-thumb {
+  background: #14241a;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00c235;
+}
+
+.font-mono-hack {
+  font-family: var(--font-mono-hack);
+}
+
+/* neon text glow */
+.glow-text {
+  text-shadow:
+    0 0 10px rgba(0, 255, 65, 0.6),
+    0 0 40px rgba(0, 255, 65, 0.25);
+}
+
+.glow-box {
+  box-shadow:
+    0 0 20px rgba(0, 255, 65, 0.15),
+    0 0 60px rgba(0, 255, 65, 0.05);
+}
+
+/* blinking terminal cursor */
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* scanline overlay for CRT feel */
+.scanlines::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.12) 0px,
+    rgba(0, 0, 0, 0.12) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  opacity: 0.35;
+}
+
+/* glitch effect on hover */
+.glitch {
+  position: relative;
+}
+.glitch:hover {
+  animation: glitch-skew 0.4s ease-in-out;
+}
+@keyframes glitch-skew {
+  0% {
+    transform: skewX(0deg);
+  }
+  20% {
+    transform: skewX(3deg) translateX(-2px);
+  }
+  40% {
+    transform: skewX(-3deg) translateX(2px);
+  }
+  60% {
+    transform: skewX(1.5deg);
+  }
+  80% {
+    transform: skewX(-1.5deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}
+
+/* animated gradient ring around profile photo */
+.profile-ring {
+  position: relative;
+  border-radius: 9999px;
+  padding: 4px;
+  background: conic-gradient(
+    from var(--ring-angle, 0deg),
+    #00ff41,
+    #005c19,
+    #00ff41,
+    #003d11,
+    #00ff41
+  );
+  animation: spin-ring 6s linear infinite;
+}
+@property --ring-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes spin-ring {
+  to {
+    --ring-angle: 360deg;
+  }
+}
+
+/* pulsing status dot */
+.status-dot {
+  position: relative;
+}
+.status-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: #00ff41;
+  animation: ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@keyframes ping-slow {
+  75%,
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+/* card hover lift + glow */
+.hacker-card {
+  background: rgba(14, 26, 18, 0.6);
+  border: 1px solid rgba(0, 255, 65, 0.12);
+  backdrop-filter: blur(12px);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.hacker-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 255, 65, 0.45);
+  box-shadow:
+    0 10px 40px -10px rgba(0, 255, 65, 0.2),
+    0 0 0 1px rgba(0, 255, 65, 0.1);
+}
+
+/* skill chip */
+.chip {
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  background: rgba(0, 255, 65, 0.05);
+  transition: all 0.25s ease;
+}
+.chip:hover {
+  background: rgba(0, 255, 65, 0.15);
+  border-color: rgba(0, 255, 65, 0.6);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 20px -4px rgba(0, 255, 65, 0.4);
+}
+
+/* grid background pattern */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0, 255, 65, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 65, 0.04) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
