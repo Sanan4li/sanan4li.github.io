@@ -81,6 +81,19 @@ export const experience = [
   },
 ];
 
+export const work = [
+  {
+    role: "Senior Software Engineer",
+    period: "2021 — Present",
+    place: "ByteMage — Lahore, Pakistan",
+  },
+  {
+    role: "Freelancer",
+    period: "2019 — 2021",
+    place: "Web & Mobile Development — Fiverr & Upwork",
+  },
+];
+
 export const education = [
   {
     degree: "BS Software Engineering",

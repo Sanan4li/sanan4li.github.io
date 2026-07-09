@@ -1,6 +1,6 @@
 import Reveal from "./reveal";
 import SectionHeading from "./section-heading";
-import { profile, education, achievements } from "@/data/portfolio";
+import { profile, work, education, achievements } from "@/data/portfolio";
 
 const icons: Record<string, string> = {
   trophy:
@@ -8,6 +8,8 @@ const icons: Record<string, string> = {
   users:
     "M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z",
   book: "M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM6 4h5v8l-2.5-1.5L6 12V4z",
+  briefcase:
+    "M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4V4a2 2 0 0 1 2-2zm0 4h4V4h-4v2z",
 };
 
 export default function About() {
@@ -40,6 +42,26 @@ export default function About() {
 
               <div className="mt-8">
                 <h4 className="font-mono-hack text-sm text-matrix-600">
+                  $ ls ./work
+                </h4>
+                <div className="mt-4 space-y-4">
+                  {work.map((job) => (
+                    <div
+                      key={job.role}
+                      className="border-l-2 border-matrix-400/40 pl-4 transition-colors hover:border-matrix-400"
+                    >
+                      <p className="font-semibold text-white">{job.role}</p>
+                      <p className="font-mono-hack text-xs text-matrix-500">
+                        {job.period}
+                      </p>
+                      <p className="text-sm text-gray-400">{job.place}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-8">
+                <h4 className="font-mono-hack text-sm text-matrix-600">
                   $ ls ./education
                 </h4>
                 <div className="mt-4 space-y-4">
@@ -61,8 +83,28 @@ export default function About() {
           </Reveal>
 
           <div className="space-y-6 lg:col-span-2">
+            <Reveal>
+              <div className="hacker-card rounded-xl p-6">
+                <div className="flex items-start gap-4">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-matrix-400/30 bg-matrix-400/10 text-matrix-400">
+                    <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d={icons.briefcase} />
+                    </svg>
+                  </span>
+                  <div>
+                    <h4 className="font-semibold text-white">
+                      Senior Software Engineer at ByteMage
+                    </h4>
+                    <p className="mt-1 text-sm leading-relaxed text-gray-400">
+                      Currently building AI-powered products, web platforms and
+                      cross-platform desktop apps.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
             {achievements.map((item, i) => (
-              <Reveal key={item.title} delay={0.15 * i}>
+              <Reveal key={item.title} delay={0.15 * (i + 1)}>
                 <div className="hacker-card rounded-xl p-6">
                   <div className="flex items-start gap-4">
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-matrix-400/30 bg-matrix-400/10 text-matrix-400">
