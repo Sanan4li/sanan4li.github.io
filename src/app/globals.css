@@ -213,3 +213,22 @@ body {
     linear-gradient(90deg, rgba(0, 255, 65, 0.04) 1px, transparent 1px);
   background-size: 44px 44px;
 }
+
+/* pulsing glow for floating skill chips */
+.chip-pulse {
+  animation: chip-glow-pulse 2.6s ease-in-out infinite;
+}
+
+@keyframes chip-glow-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 8px rgba(0, 255, 65, 0.12);
+    opacity: 0.7;
+  }
+  50% {
+    box-shadow:
+      0 0 18px rgba(0, 255, 65, 0.4),
+      0 0 36px rgba(0, 255, 65, 0.12);
+    opacity: 1;
+  }
+}

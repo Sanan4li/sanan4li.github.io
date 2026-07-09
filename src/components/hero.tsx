@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import MatrixRain from "./matrix-rain";
 import Typewriter from "./typewriter";
 import TerminalCard from "./terminal-card";
+import SkillChips from "./skill-chips";
 import { profile } from "@/data/portfolio";
 
 export default function Hero() {
@@ -15,6 +16,7 @@ export default function Hero() {
     >
       <MatrixRain opacity={0.18} />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-void-950/60 to-void-950" />
+      <SkillChips />
 
       <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-14 px-5 lg:grid-cols-2">
         <div>
