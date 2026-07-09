@@ -99,6 +99,10 @@ export default function About() {
                       Currently building AI-powered products, web platforms and
                       cross-platform desktop apps.
                     </p>
+                    <p className="mt-1 text-sm leading-relaxed text-gray-400">
+                      Led frontend team, architectured scalable application
+                      from the start.
+                    </p>
                   </div>
                 </div>
               </div>

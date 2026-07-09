@@ -179,32 +179,6 @@ export type Project = {
 
 export const projectCategories = [
   {
-    id: "web-dev",
-    label: "Web Development",
-    projects: [
-      {
-        title: "AskHumans",
-        image: "/images/survey.jpg",
-        tags: ["React", "NestJS", "OpenAI", "RAG"],
-      },
-      {
-        title: "Hall Booking Platform — Search",
-        image: "/images/search-hall.png",
-        tags: ["React", "Node JS", "MongoDB"],
-      },
-      {
-        title: "Hall Booking Platform — Online Booking",
-        image: "/images/book-online.png",
-        tags: ["React", "Node JS", "Stripe"],
-      },
-      {
-        title: "Marriage Hall Listings",
-        image: "/images/marriage-hall.png",
-        tags: ["React", "Redux", "REST APIs"],
-      },
-    ] as Project[],
-  },
-  {
     id: "web-design",
     label: "Web Design",
     projects: [
@@ -267,6 +241,32 @@ export const projectCategories = [
         title: "Complete Solutions",
         image: "/images/complete.png",
         tags: ["HTML", "CSS", "JS"],
+      },
+    ] as Project[],
+  },
+  {
+    id: "web-dev",
+    label: "Web Development",
+    projects: [
+      {
+        title: "AskHumans",
+        image: "/images/survey.jpg",
+        tags: ["React", "NestJS", "OpenAI", "RAG"],
+      },
+      {
+        title: "Hall Booking Platform — Search",
+        image: "/images/search-hall.png",
+        tags: ["React", "Node JS", "MongoDB"],
+      },
+      {
+        title: "Hall Booking Platform — Online Booking",
+        image: "/images/book-online.png",
+        tags: ["React", "Node JS", "Stripe"],
+      },
+      {
+        title: "Marriage Hall Listings",
+        image: "/images/marriage-hall.png",
+        tags: ["React", "Redux", "REST APIs"],
       },
     ] as Project[],
   },

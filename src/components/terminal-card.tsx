@@ -41,7 +41,7 @@ export default function TerminalCard() {
       </div>
       <div className="min-h-[210px] p-4 font-mono-hack text-[13px] leading-6">
         {lines.slice(0, visibleLines).map((line, i) => (
-          <p key={i} className={line.prompt ? "text-matrix-300" : "text-gray-400"}>
+          <p key={i} className={line.prompt ? "text-matrix-300" : "text-matrix-200"}>
             {line.prompt && <span className="text-matrix-400">$ </span>}
             {line.text}
           </p>
