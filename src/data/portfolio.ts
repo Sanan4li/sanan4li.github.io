@@ -11,7 +11,7 @@ export const profile = {
   ],
   location: "Lahore, Pakistan",
   email: "alisanan620@gmail.com",
-  phone: "+92 346 4674965",
+  phone: "+92 346 ---------",
   summary:
     "Highly motivated AI Software Engineer with 6+ years of industry experience building and maintaining Web, Desktop and Mobile applications. Skilled in JavaScript, TypeScript, React, Electron, and AI/LLM integration. Effective team player with strong analytical skills and a proven ability to deliver complex, production-grade solutions.",
   social: {
